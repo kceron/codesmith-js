@@ -3,21 +3,21 @@
 function addingAllTheWeirdStuff(array1, array2){
   let sumOdds = 0;
   let sumEvens = 0;
-  for(let i=0; i <= array2.length-1; i++){
+  for(let i=0; i < array2.length; i++){
       if(array2[i]%2===0){
         sumEvens += array2[i]
   		}else if(array2[i]%2!==0){
         sumOdds += array2[i]
       }
   }
-  for(let i=0; i<=array1.length-1; i++){
+  for(let i=0; i<array1.length; i++){
     if(array1[i] < 10){
       array1[i] += sumOdds
     }else{
       array1[i] += sumEvens
     }
   }
-  for(let i=0; i<=array2.length-1; i++){
+  for(let i=0; i<array2.length; i++){
     if(array2[i] > 20){
       for(let i=0; i<=array1.length-1; i++){
         array1[i] += 1
