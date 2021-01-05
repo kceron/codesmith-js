@@ -2,16 +2,18 @@
 // Now let's rebuild map from the previous challenge. This time instead of using a for loop, you're going to use the forEach we just created.
 // ADD CODE HERE
 function forEach(arr, callback){
-    let newArr = []
     for(let i=0; i<arr.length; i++){
-      newArr.push(callback(arr[i]))
+      callback(arr[i])
     }
-    return newArr
   };
   
-  function map(arr, callback){
-      return forEach(arr,callback)
-  };
+function map(array, callb){
+    let newArr = [];
+    forEach(array, function(elem){
+        newArr.push(callb(elem))
+    })
+    return newArr;
+};
 // console.log(typeof forEach); // should log: 'function'
 // forEach(['a','b','c'], i => console.log(i)); // should log: 'a', 'b', 'c'
 // console.log(typeof map); // should log: 'function'
