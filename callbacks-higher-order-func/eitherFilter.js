@@ -1,8 +1,17 @@
 // Add code to the function eitherFilter in the place marked "ADD CODE HERE" in order to achieve the desired console logs. The array returned from eitherFilter should contain all elements in the passed-in array that yield a truthy return value when passed into EITHER of the two callbacks passed into eitherFilter.
 function eitherFilter(array, callback1, callback2) {
     // ADD CODE HERE
-    
-  }
+    let result = [];
+    for(let i=0; i<array.length; i++){
+      if(callback1(array[i])){
+        result.push(array[i])
+      }
+        if(callback2(array[i])){
+        result.push(array[i])
+      }
+    }
+    return result
+};
 
 //   const arrOfNums = [10, 35, 105, 9];
 //   const integerSquareRoot = n => Math.sqrt(n) % 1 === 0;
