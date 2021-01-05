@@ -8,13 +8,13 @@ function subtractTwo(num){
     return num - 2
   };
   
-  function map(numArr, callback){
+function map(numArr, callback){
     let newArr = [];
     for(let i=0; i<numArr.length; i++){
       newArr.push(callback(numArr[i]))
     }
     return newArr
-  };
+};
 // console.log(typeof subtractTwo); // should log: 'function'
 // console.log(typeof map); // should log: 'function'
 // console.log(map([3,4,5], subtractTwo)); // should log: [ 1, 2, 3 ]
