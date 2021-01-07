@@ -2,7 +2,14 @@
 // ADD CODE HERE
 function countBy(arr, callback){
     let obj = {}
-    
+    for(let elem of arr){
+      if(callback(elem) in obj){
+        obj[callback(elem)]++
+      }else{
+        obj[callback(elem)] = 1
+      }
+     };
+    return obj
 };
 
 // function evenOdd(n) {
