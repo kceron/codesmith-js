@@ -4,7 +4,6 @@ function multiMap(arrOfVal, arrOfCallbacks){
     let resultObj = {};
     for(let i=0; i<arrOfVal.length; i++){
       let objValues = [];
-        // let vals = arrOfCallbacks.forEach(callback => callback(arrOfVal[i]))
       for(let ii=0; ii<arrOfCallbacks.length; ii++){
         let callback = arrOfCallbacks[i]
         objValues.push(callback(arrOfVal[i]))
