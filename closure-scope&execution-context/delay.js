@@ -2,8 +2,8 @@
 // ADD CODE HERE
 function delay(callback, waitTime){
   return function() {
-  	setTimeout(callback, waitTime);
-	};
+    setTimeout(callback, waitTime);
+  };
 };
 
 // let count = 0;
