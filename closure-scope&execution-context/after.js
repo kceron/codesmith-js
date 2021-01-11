@@ -2,7 +2,7 @@
 // ADD CODE HERE
 function after(num, callback){
   let count = 0
-  function canExecute(string){
+  return function(string){
     count++
   	if(count >= num){
     	return callback(string)
@@ -10,7 +10,6 @@ function after(num, callback){
     	return
   	};
 	};
-  return canExecute;
 };
 
 const called = function(string) { return('hello ' + string); };
