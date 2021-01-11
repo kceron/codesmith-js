@@ -6,9 +6,7 @@ function after(num, callback){
     count++
   	if(count >= num){
     	return callback(string)
-  	}else if(count < num){
-    	return
-  	};
+  	}
 	};
 };
 
