@@ -11,7 +11,7 @@ function once(callback){
     }else{
       return result
     }
-  }
+  };
   return callItOnce;
 };
 
