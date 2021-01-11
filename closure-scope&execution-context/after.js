@@ -4,10 +4,10 @@ function after(num, callback){
   let count = 0
   return function(string){
     count++
-  	if(count >= num){
-    	return callback(string)
-  	}
-	};
+    if(count >= num){
+    return callback(string)
+    }
+  };
 };
 
 const called = function(string) { return('hello ' + string); };
