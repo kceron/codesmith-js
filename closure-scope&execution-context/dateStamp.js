@@ -5,7 +5,7 @@ function dateStamp(func){
   return function(...args){
     resultObj.date = new Date().toString().split(' ').splice(0,4).join(' ')
     resultObj.output = func(...args)
-    return resultObj;
+    return resultObj
   };
 };
 
