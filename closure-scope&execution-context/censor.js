@@ -10,7 +10,7 @@ function censor(){
     Object.keys(storedStrings).forEach(key => {
       strOne = strOne.replace(key, storedStrings[key])
     })
-		return strOne;
+    return strOne;
   };
 };
 
