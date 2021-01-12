@@ -6,7 +6,7 @@ function cycleIterator(arr){
   return function(){
     if(count < arr.length){
       elem = arr[count]
-			count++
+      count++
       return elem
     }else{
       count = 0
