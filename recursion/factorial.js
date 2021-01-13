@@ -5,6 +5,12 @@ function factorial(num) {
   return num * factorial(num-1)
 };
 
+// solution 2.
+// function factorial(num, product=1) {
+// 	if (num === 0) return product;
+//   return factorial(num-1, product*num)
+// };
+
 // console.log(factorial(4)); // -> 24
 // console.log(factorial(6)); // -> 720
 // console.log(factorial(0)); // -> 1
