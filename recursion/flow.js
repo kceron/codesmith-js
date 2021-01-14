@@ -1,6 +1,7 @@
 // Write a function that takes an array of functions and a number that will be piped through all those functions. The input number passes through the first function, whose output is passed as input to the second function, whose output is passed as input to the third function, and so on. Use recursion to return the final output of the last function in the array.
 function flow(input, funcArray) {
-
+  if(funcArray[0]===undefined) return input;
+  return flow(funcArray[0](input), funcArray.slice(1))
 };
 
 // function multiplyBy2(num) { return num * 2; }
