@@ -3,3 +3,16 @@
 // Write a function, delayLog, that takes as input a delayTime and an index, i. When invoked, the function should wait delayTime milliseconds before logging to the console, "printing element i" (with "i" replaced with the actual index passed in).
 // Putting it all together, run the delayLog function on each item of the delays array using the forEach function you created.
 // Add code here
+function forEach(arr, cb){
+  for(let i=0; i<arr.length; i++){
+    cb(arr[i], i)
+  };
+};
+
+let delays = [200,500,0,350];
+
+function delayLog(delayTime, i){
+  setTimeout(function(){ console.log(`printing element ${i}`) }, delayTime);
+};
+
+forEach(delays, delayLog)
