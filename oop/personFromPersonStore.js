@@ -7,9 +7,11 @@ const personStore = {
 
 function personFromPersonStore(name, age) {
 	// add code here
-
-
-}
+  const person = Object.create(personStore);
+  person.name = name
+  person.age = age
+  return person
+};
 
 const sandra = personFromPersonStore('Sandra', 26);
 
