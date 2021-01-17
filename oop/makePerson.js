@@ -5,9 +5,11 @@
 // Return the object
 function makePerson(name, age) {
 	// add code here
-
-
-}
+  return {
+    name: name,
+    age: age,
+  };
+};
 
 const vicky = makePerson('Vicky', 24);
 
