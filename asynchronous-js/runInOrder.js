@@ -1,11 +1,15 @@
 // Write a function called runInOrder that accepts as arguments in this order -
-
 // an array of functions
 // an array of numbers representing times in milliseconds
 // runInOrder should execute the functions in order, with the corresponding numbers in milliseconds being the time to wait from the previous invocation.
 // Add code here
-
-// /* Uncomment the following lines and click 'run' to test your work */
+function runInOrder(funcArr, timeArr){
+  let totalTime = 0
+  for(let i=0; i<funcArr.length; i++){
+    totalTime += timeArr[i]
+     setTimeout(funcArr[i], totalTime[i]);
+  };
+};
 
 // function sayHi() {
 //   console.log('hi');
