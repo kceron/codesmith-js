@@ -15,7 +15,7 @@ function personFromPersonStore(name, age) {
 const sandra = personFromPersonStore('Sandra', 26);
 
 // add code here
-personStore.introduce = personStore.introduce = function introducePerson(name) {
+personStore.introduce = personStore.introduce = function introducePerson() {
   console.log('Hi, my name is ' + this.name)
 };
 
