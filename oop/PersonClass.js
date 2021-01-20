@@ -2,12 +2,12 @@
 class PersonClass {
 	constructor() {
     // add code here
-      
-
-	}
-
-	// add code here
-
+    this.name = name;
+	  }
+	  // add code here
+    greet() {
+      console.log('hello');
+    }
 }
 
 const george = new PersonClass('George');
