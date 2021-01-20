@@ -10,6 +10,11 @@ class PersonClass {
 }
 
 // add code here
+class DeveloperClass extends PersonClass {
+  introduce() {
+    console.log("Hello World, my name is " + this.name)
+  }
+}
 
 const thai = new DeveloperClass('Thai', 32);
 
