@@ -15,6 +15,7 @@ function personFromConstructor(name, age) {
 const mike = personFromConstructor('Mike', 30);
 
 // add code here
-
+function introduce(){console.log('Hi, my name is ' + this.name)}
+PersonConstructor.prototype.introduce = introduce;
 
 // mike.introduce(); // -> Logs 'Hi, my name is Mike'
