@@ -17,5 +17,9 @@
     "16": "focus.png",
     "48": "focus.png",
     "128": "focus.png"
+  },
+  "browser_action": {
+    "default_icon": "focus.png",
+    "default_popup": "./popupPage/popup.html"
   }
 }
