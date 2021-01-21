@@ -8,5 +8,10 @@
       "matches": ["https://www.youtube.com/*"],
       "js": ["./main.js"]
     }  
-  ]
+  ],
+  "icons": {
+    "16": "focus.png",
+    "48": "focus.png",
+    "128": "focus.png"
+  }
 }
