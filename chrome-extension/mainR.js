@@ -12,11 +12,4 @@ const img = document.createElement("img");
 img.src = "https://www.trinityp3.com/wp-content/uploads/2019/04/strong-brand.jpeg"
 parentElement.appendChild(img); 
 
-
-
-
-
-
-
-
 // var contents = document.getElementsByClassName('.someClass');
