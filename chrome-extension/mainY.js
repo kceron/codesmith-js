@@ -13,7 +13,11 @@ img.src = "https://www.trinityp3.com/wp-content/uploads/2019/04/strong-brand.jpe
 parentElement.appendChild(img); 
 
 $('h1').click(function() {
-  alert('H1 was clicked!');
+  alert('Future you will thank you!');
+});
+
+$('img').click(function() {
+  alert('Ok you can take a pomodoro break!');
 });
 
 // const images = document.querySelectorAll("img");
