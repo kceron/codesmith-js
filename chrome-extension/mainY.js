@@ -12,6 +12,10 @@ const img = document.createElement("img");
 img.src = "https://www.trinityp3.com/wp-content/uploads/2019/04/strong-brand.jpeg"
 parentElement.appendChild(img); 
 
+$('h1').click(function() {
+  alert('H1 was clicked!');
+});
+
 // const images = document.querySelectorAll("img");
 // const parentArr = []
 // images.forEach(function(img) {
