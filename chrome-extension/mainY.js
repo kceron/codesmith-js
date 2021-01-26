@@ -17,7 +17,7 @@ $('h1').click(function() {
 });
 
 $('img').click(function() {
-  alert('Ok you can take a pomodoro break!');
+  img.remove();
 });
 
 // const images = document.querySelectorAll("img");
