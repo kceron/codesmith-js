@@ -1,21 +1,24 @@
 // youtube
-// API call for random images
-$.ajax({
-  method: 'GET',
-  url: 'https://picsum.photos/list',
-  success: function(result) {
-   // Returns a random number between min (inclusive) and max (exclusive)
+// // API call for random images
+// function apiCall(){
+const linksArray = $.ajax({
+    method: 'GET',
+    url: 'https://picsum.photos/list',
+    success: function(result) {
+    // GET RANDOM INDEX NUM
     let max = result.length
     function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
+      return Math.floor(Math.random() * max);
     }
-    return getRandomInt(max)
-  },
-  error: function(err) {
-   // if any errors occur during the process you can check out the
-   // the error by logging the 'err' argument
-  }
-});
+    return result[getRandomInt(max)]
+    // const linksArr = result.map(elem => elem.post_url);
+    // return linksArr
+    },
+    error: function(err) {
+     console.log(err)
+    }
+  });
+// };
 
 const contents = document.getElementById('contents');
 parentElement = contents.parentElement
@@ -27,7 +30,8 @@ h1.classList.add("beautText");
 parentElement.appendChild(h1)
 
 const img = document.createElement("img");
-img.src = `https://unsplash.it/1200/800?image=${img.id}`
+// img.id = "imagen"
+img.src = `https://unsplash.it/1200/800?image=${image.id}`
 parentElement.appendChild(img); 
 
 $('h1').click(function() {
@@ -35,7 +39,11 @@ $('h1').click(function() {
 });
 
 $('img').click(function() {
-  img.remove();
+  console.log(linksArray)
+  // let photoObj = linksArray.responseJSON[Math.floor(Math.random() * items.length)];
+  // console.log(photoObj)
+  // document.getElementById("imagen").src=`apiCall()`;
+  // this.src = `apiCall()`
 });
 
 
