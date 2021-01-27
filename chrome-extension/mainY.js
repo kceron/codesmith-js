@@ -1,4 +1,22 @@
 // youtube
+// API call for random images
+$.ajax({
+  method: 'GET',
+  url: 'https://picsum.photos/list',
+  success: function(result) {
+   // Returns a random number between min (inclusive) and max (exclusive)
+    let max = result.length
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+    return getRandomInt(max)
+  },
+  error: function(err) {
+   // if any errors occur during the process you can check out the
+   // the error by logging the 'err' argument
+  }
+});
+
 const contents = document.getElementById('contents');
 parentElement = contents.parentElement
 contents.parentNode.removeChild(contents);
@@ -9,7 +27,7 @@ h1.classList.add("beautText");
 parentElement.appendChild(h1)
 
 const img = document.createElement("img");
-img.src = "https://www.trinityp3.com/wp-content/uploads/2019/04/strong-brand.jpeg"
+img.src = `https://unsplash.it/1200/800?image=${img.id}`
 parentElement.appendChild(img); 
 
 $('h1').click(function() {
@@ -19,6 +37,8 @@ $('h1').click(function() {
 $('img').click(function() {
   img.remove();
 });
+
+
 
 // const images = document.querySelectorAll("img");
 // const parentArr = []
