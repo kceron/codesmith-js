@@ -1,52 +1,56 @@
 // youtube
-// // API call for random images
-// function apiCall(){
-const linksArray = $.ajax({
-    method: 'GET',
-    url: 'https://picsum.photos/list',
-    success: function(result) {
-    // GET RANDOM INDEX NUM
-    let max = result.length
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * max);
-    }
-    return result[getRandomInt(max)]
-    // const linksArr = result.map(elem => elem.post_url);
-    // return linksArr
-    },
-    error: function(err) {
-     console.log(err)
-    }
-  });
-// };
-
-const contents = document.getElementById('contents');
-parentElement = contents.parentElement
-contents.parentNode.removeChild(contents);
-
-const h1 = document.createElement("h1")
-h1.textContent += 'Get back to achieving your coding dreams';
-h1.classList.add("beautText");
-parentElement.appendChild(h1)
-
-const img = document.createElement("img");
-// img.id = "imagen"
-img.src = `https://unsplash.it/1200/800?image=${image.id}`
-parentElement.appendChild(img); 
-
-$('h1').click(function() {
-  alert('Future you will thank you!');
+// API call for random images
+let linksArr;
+  $.ajax({
+  method: 'GET',
+  url: 'https://picsum.photos/list',
+  success: function(result) {
+  linksArr = result.map(elem => elem.id);
+  createImgLocation()
+  changePicture()
+  eventToImg()
+  },
+  error: function(err) {
+    console.log(err)
+  }
 });
 
-$('img').click(function() {
-  console.log(linksArray)
-  // let photoObj = linksArray.responseJSON[Math.floor(Math.random() * items.length)];
-  // console.log(photoObj)
-  // document.getElementById("imagen").src=`apiCall()`;
-  // this.src = `apiCall()`
-});
+function getRandomInt() {
+  return Math.floor(Math.random() * Math.floor(linksArr.length));
+};
 
+function createImgLocation() {
+  const contents = document.getElementById('contents');
+  parentElement = contents.parentElement
+  contents.parentNode.removeChild(contents);
 
+  const h1 = document.createElement("h1")
+  h1.textContent += 'Get back to achieving your coding dreams';
+  h1.classList.add("beautText");
+  parentElement.appendChild(h1)
+
+  const img = document.createElement("img");  
+  img.className = "inspiration-image"
+  parentElement.appendChild(img); 
+};
+
+function changePicture() {
+  const picId = getRandomInt()
+  const imageExists = document.querySelector('.inspiration-image')
+  imageExists.src = `https://unsplash.it/1200/800?image=${linksArr[picId]}` 
+};
+
+function eventToImg() {
+  const img = document.querySelector('.inspiration-image')
+// $('h1').click(function() {
+//   alert('Future you will thank you!');
+// });
+
+  img.addEventListener('click',(e) => {
+    console.log('clicked')
+    changePicture()
+  })
+};
 
 // const images = document.querySelectorAll("img");
 // const parentArr = []
